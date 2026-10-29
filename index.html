@@ -9,6 +9,7 @@
   <meta property="og:description" content="Practical digital and technology solutions for businesses.">
   <meta property="og:type" content="website">
   <title>Oyinkansola Ajani | Business Growth &amp; Technology Solutions</title>
+
   <style>
     :root {
       --bg: #0B1220;
@@ -88,9 +89,10 @@
       scroll-margin-top: 75px;
     }
 
+    /* HOME: TITLE ONLY, NO PROFILE PHOTO */
     .hero {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 45px;
       min-height: 500px;
@@ -162,25 +164,6 @@
     .btn-outline {
       background: transparent;
       color: var(--blue);
-    }
-
-    .profile-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 16px;
-      max-width: 330px;
-      width: 100%;
-      margin: auto;
-    }
-
-    .profile-card img {
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 13px;
-      display: block;
     }
 
     .section-heading {
@@ -306,30 +289,12 @@
       margin-bottom: 12px;
     }
 
+    /* ABOUT LEFT, PROFILE PHOTO RIGHT */
     .about-layout {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: 1.1fr .9fr;
       gap: 28px;
       align-items: stretch;
-    }
-
-    .about-profile {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-      min-width: 0;
-    }
-
-    .about-profile img {
-      width: 145px;
-      height: 175px;
-      object-fit: cover;
-      border-radius: 12px;
-      flex-shrink: 0;
     }
 
     .about-copy {
@@ -341,6 +306,31 @@
 
     .about-copy p {
       margin-bottom: 12px;
+    }
+
+    .about-profile {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      min-width: 0;
+    }
+
+    /* Preserve the photo's original proportions */
+    .about-profile img {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 12px;
     }
 
     .skills {
@@ -500,10 +490,6 @@
         padding-top: 35px;
       }
 
-      .profile-card {
-        max-width: 290px;
-      }
-
       .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -540,19 +526,16 @@
         padding: 24px 15px;
       }
 
-      .profile-card img {
-        height: 300px;
-      }
-
       .about-profile {
-        align-items: flex-start;
+        align-items: center;
         gap: 14px;
         padding: 16px;
       }
 
       .about-profile img {
-        width: 105px;
-        height: 135px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
       }
 
       h1 {
@@ -561,8 +544,8 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <div class="container nav">
       <a class="logo" href="#home">Oyinkansola Ajani</a>
@@ -580,8 +563,7 @@
   </header>
 
   <main>
-
-    <!-- HOME -->
+    <!-- HOME: TITLE ONLY -->
     <section class="container hero" id="home">
       <div>
         <div class="eyebrow">Business Growth &amp; Technology Solutions</div>
@@ -595,11 +577,6 @@
           <a class="btn" href="#services">Explore Services</a>
           <a class="btn btn-outline" href="#projects">View My Work</a>
         </div>
-      </div>
-
-      <div class="profile-card">
-        <img src="WhatsApp%20Image%202026-09-11%20at%202.04.20%20AM.jpeg"
-             alt="Oyinkansola Ajani">
       </div>
     </section>
 
@@ -844,7 +821,7 @@
       </div>
     </section>
 
-    <!-- ABOUT ME AND PROFILE SIDE BY SIDE -->
+    <!-- ABOUT LEFT, PROFILE PHOTO RIGHT -->
     <section id="about">
       <div class="container">
         <div class="section-heading">
@@ -854,16 +831,6 @@
         </div>
 
         <div class="about-layout">
-          <div class="about-profile">
-            <img
-              src="WhatsApp%20Image%202026-09-11%20at%202.04.20%20AM.jpeg"
-              alt="Portrait of Oyinkansola Ajani">
-            <div>
-              <h3>Oyinkansola Ajani</h3>
-              <p>Digital Services &amp; Technology Solutions</p>
-            </div>
-          </div>
-
           <div class="about-copy">
             <p>Hi, I'm Oyinkansola Ajani.</p>
             <p>
@@ -888,6 +855,16 @@
               You can come with a clear plan or just an idea you're trying to
               figure out. Either way, I'm happy to have a conversation.
             </p>
+          </div>
+
+          <div class="about-profile">
+            <img
+              src="WhatsApp%20Image%202026-09-11%20at%202.04.20%20AM.jpeg"
+              alt="Portrait of Oyinkansola Ajani">
+            <div>
+              <h3>Oyinkansola Ajani</h3>
+              <p>Digital Services &amp; Technology Solutions</p>
+            </div>
           </div>
         </div>
 
@@ -1018,7 +995,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -1026,6 +1002,5 @@
       © 2026 Oyinkansola Ajani. All rights reserved.
     </div>
   </footer>
-
 </body>
 </html>
