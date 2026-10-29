@@ -1,219 +1,153 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Oyinkansola Ajani | Email Marketing, Shopify & Automation</title>
-
-  <meta name="description" content="Oyinkansola Ajani helps businesses automate, sell and grow online through workflow automation, email marketing, Klaviyo and Shopify.">
-
+  <title>Oyinkansola Ajani | Email Marketing & Business Automation</title>
+  <meta name="description" content="Oyinkansola Ajani helps businesses improve email marketing, Shopify experiences, and business automation.">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+    :root {
+      --bg: #0B1220;
+      --panel: #111D30;
+      --blue: #8ED8FF;
+      --white: #EAF6FF;
+      --muted: #A8B9CC;
+      --border: rgba(142, 216, 255, 0.2);
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #08080d;
-      color: #f5f5f5;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .container {
-      width: 90%;
-      max-width: 1150px;
+      width: min(1100px, 90%);
       margin: auto;
     }
 
-    /* NAVIGATION */
-
-    nav {
+    header {
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(8, 8, 13, 0.92);
+      background: rgba(11, 18, 32, 0.95);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid #1c1c27;
+      z-index: 10;
     }
 
-    .nav-inner {
-      height: 75px;
+    nav {
+      min-height: 75px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
 
     .logo {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    .logo span {
-      color: #9b7cff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--blue);
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
-      list-style: none;
-      font-size: 14px;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
-    .nav-links a {
-      color: #bdbdc8;
-      transition: 0.3s;
-    }
+    .nav-links a:hover { color: var(--blue); }
 
-    .nav-links a:hover {
-      color: #a98cff;
-    }
+    .hero { padding: 95px 0 85px; }
 
-    /* HERO */
-
-    .hero {
-      min-height: 90vh;
-      display: flex;
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
       align-items: center;
-      padding: 100px 0;
-      background:
-        radial-gradient(circle at 80% 20%, rgba(123, 92, 255, 0.13), transparent 30%),
-        radial-gradient(circle at 20% 80%, rgba(70, 40, 150, 0.08), transparent 30%);
-    }
-
-    .hero-content {
-      max-width: 800px;
+      gap: 55px;
     }
 
     .eyebrow {
-      color: #9b7cff;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(45px, 7vw, 82px);
-      line-height: 1.02;
-      letter-spacing: -4px;
-      margin-bottom: 28px;
-    }
-
-    .hero h1 span {
-      color: #9b7cff;
-    }
-
-    .hero p {
-      color: #a9a9b5;
-      font-size: 18px;
-      max-width: 680px;
-      margin-bottom: 35px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 23px;
-      border-radius: 8px;
-      border: 1px solid #30303c;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: #9b7cff;
-      color: #ffffff;
-      border-color: #9b7cff;
-    }
-
-    .btn-primary:hover {
-      background: #8665f2;
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      color: #eeeeee;
-    }
-
-    .btn-secondary:hover {
-      border-color: #9b7cff;
-      color: #9b7cff;
-    }
-
-    /* GENERAL SECTIONS */
-
-    section {
-      padding: 100px 0;
-      border-top: 1px solid #15151d;
-    }
-
-    .section-label {
-      color: #9b7cff;
+      color: var(--blue);
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
+      letter-spacing: 3px;
+      font-size: 0.78rem;
       font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: 42px;
-      letter-spacing: -1.5px;
       margin-bottom: 20px;
     }
 
-    .section-description {
-      color: #9999a6;
-      max-width: 700px;
-      margin-bottom: 50px;
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
     }
 
-    /* ABOUT */
+    h1 span, .highlight { color: var(--blue); }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
+    .hero-text {
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 1.08rem;
+      margin-bottom: 30px;
     }
 
-    .about-text p {
-      color: #aaaab5;
-      margin-bottom: 18px;
+    .hero-image {
+      width: 100%;
+      max-width: 330px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 24px;
+      border: 2px solid var(--blue);
+      box-shadow: 0 0 45px rgba(142, 216, 255, 0.12);
+      justify-self: end;
     }
 
-    .about-card {
-      padding: 35px;
-      border: 1px solid #242431;
-      border-radius: 16px;
-      background: #0d0d14;
+    .buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .button {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: 0.2s;
     }
 
-    .about-card h3 {
+    .button-primary {
+      background: var(--blue);
+      color: #0B1220;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      color: var(--white);
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    section.content-section { padding: 75px 0; }
+
+    .section-heading {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      line-height: 1.2;
       margin-bottom: 15px;
     }
 
-    .about-card p {
-      color: #9999a6;
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 35px;
     }
-
-    /* SERVICES */
 
     .cards {
       display: grid;
@@ -222,587 +156,241 @@
     }
 
     .card {
-      background: #0d0d14;
-      border: 1px solid #242431;
-      border-radius: 15px;
-      padding: 30px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #514477;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 27px;
     }
 
     .card-number {
-      color: #9b7cff;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 25px;
-    }
-
-    .card h3 {
-      font-size: 22px;
+      color: var(--blue);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 2px;
       margin-bottom: 15px;
     }
 
-    .card p {
-      color: #9999a6;
-      font-size: 15px;
+    .card h3 { font-size: 1.2rem; margin-bottom: 12px; }
+
+    .card p, .about-text, .contact-text { color: var(--muted); }
+
+    .card ul {
+      margin: 15px 0 0 18px;
+      color: var(--muted);
     }
 
-    /* WORK */
+    .card li { margin-bottom: 6px; }
 
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+    .about-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 35px;
+      max-width: 850px;
     }
 
-    .project {
-      background: #0d0d14;
-      border: 1px solid #242431;
-      border-radius: 16px;
-      padding: 32px;
-      transition: 0.3s;
-    }
+    .about-text { margin-top: 15px; }
 
-    .project:hover {
-      transform: translateY(-5px);
-      border-color: #514477;
-    }
-
-    .project-tag {
-      display: inline-block;
-      font-size: 11px;
-      color: #b49fff;
-      background: rgba(155, 124, 255, 0.08);
-      border: 1px solid rgba(155, 124, 255, 0.2);
-      padding: 6px 10px;
-      border-radius: 30px;
-      margin-bottom: 20px;
-    }
-
-    .project h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-
-    .project p {
-      color: #9999a6;
-      margin-bottom: 20px;
-    }
-
-    .project-details {
-      border-top: 1px solid #20202b;
-      padding-top: 18px;
-      color: #777784;
-      font-size: 13px;
-    }
-
-    /* SKILLS */
-
-    .skills {
+    .tags {
       display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      color: var(--blue);
+      background: rgba(142, 216, 255, 0.06);
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+    }
+
+    .contact-panel {
+      background: linear-gradient(135deg, #13243A, #0D1728);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .contact-text { margin: 15px 0 25px; max-width: 650px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .skill {
-      padding: 10px 15px;
-      border: 1px solid #292936;
-      border-radius: 30px;
-      color: #bdbdc8;
-      background: #0d0d14;
-      font-size: 14px;
-    }
-
-    /* CONTACT */
-
-    .contact-box {
-      max-width: 800px;
-      background: #0d0d14;
-      border: 1px solid #242431;
-      border-radius: 18px;
-      padding: 45px;
-    }
-
-    .contact-box p {
-      color: #9999a6;
-      margin-bottom: 30px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid #1c1c27;
-      padding: 35px 0;
-      color: #686874;
-      font-size: 13px;
-    }
-
-    footer span {
-      color: #9b7cff;
-    }
-
-    /* MOBILE */
-
     @media (max-width: 800px) {
-
-      .nav-links {
-        display: none;
+      .hero-layout { grid-template-columns: 1fr; gap: 35px; }
+      .hero-image {
+        justify-self: start;
+        max-width: 270px;
+        grid-row: 1;
       }
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding-top: 55px; }
+      h1 { letter-spacing: -1px; }
+    }
 
-      .hero {
-        min-height: auto;
-        padding: 90px 0;
-      }
-
-      .hero h1 {
-        letter-spacing: -2px;
-      }
-
-      .about-grid,
-      .cards,
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title {
-        font-size: 34px;
-      }
-
-      .contact-box {
-        padding: 30px;
-      }
+    @media (max-width: 520px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; }
+      .nav-links { gap: 12px; }
+      .contact-panel, .about-panel { padding: 24px; }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">Oyinkansola Ajani</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-  <!-- NAVIGATION -->
-
-  <nav>
-    <div class="container nav-inner">
-
-      <a href="#home" class="logo">
-        Oyinkansola<span>.</span>
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-    </div>
-  </nav>
-
-
-  <!-- HERO -->
-
-  <section class="hero" id="home">
-
-    <div class="container">
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          EMAIL MARKETING • SHOPIFY • WORKFLOW AUTOMATION
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <p class="eyebrow">Email Marketing · Shopify · Automation</p>
+          <h1>I Help Businesses <span>Automate, Sell & Grow Online.</span></h1>
+          <p class="hero-text">
+            I help businesses create better customer experiences through email
+            marketing, Shopify improvements, and practical business automation.
+          </p>
+          <div class="buttons">
+            <a class="button button-primary" href="#contact">Let's Talk</a>
+            <a class="button button-secondary" href="#services">Explore Services</a>
+          </div>
         </div>
 
-        <h1>
-          I Help Businesses
-          <span>Automate, Sell & Grow Online.</span>
-        </h1>
+        <img
+          class="hero-image"
+          src="WhatsApp%20Image%202026-09-11%20at%202.04.20%20AM.jpeg"
+          alt="Oyinkansola Ajani profile photo"
+        >
+      </div>
+    </section>
 
-        <p>
-          I help businesses build smarter workflows, improve customer
-          communication, and streamline their e-commerce operations through
-          email marketing, Shopify, and workflow automation.
+    <section class="content-section" id="services">
+      <div class="container">
+        <p class="eyebrow">What I Do</p>
+        <h2 class="section-heading">Services That Support Business Growth</h2>
+        <p class="section-intro">
+          Practical digital services designed to improve customer communication,
+          online shopping experiences, and everyday business operations.
         </p>
 
-        <div class="buttons">
+        <div class="cards">
+          <article class="card">
+            <p class="card-number">01 / EMAIL</p>
+            <h3>Email Marketing & Klaviyo</h3>
+            <p>Build stronger customer relationships with well-planned email communication.</p>
+            <ul>
+              <li>Email campaign setup</li>
+              <li>Welcome email automation</li>
+              <li>Abandoned cart flows</li>
+              <li>Customer retention emails</li>
+            </ul>
+          </article>
 
-          <a href="#work" class="btn btn-primary">
-            View My Work
-          </a>
+          <article class="card">
+            <p class="card-number">02 / E-COMMERCE</p>
+            <h3>Shopify Store Design</h3>
+            <p>Create a professional and user-friendly shopping experience for customers.</p>
+            <ul>
+              <li>Shopify store setup</li>
+              <li>Theme customization</li>
+              <li>Mobile-friendly layouts</li>
+              <li>App integrations</li>
+            </ul>
+          </article>
 
-          <a href="#contact" class="btn btn-secondary">
-            Let's Work Together
-          </a>
-
+          <article class="card">
+            <p class="card-number">03 / OPERATIONS</p>
+            <h3>Business Automation</h3>
+            <p>Reduce repetitive work and connect the tools your business relies on.</p>
+            <ul>
+              <li>Workflow automation</li>
+              <li>App integrations</li>
+              <li>CRM process automation</li>
+              <li>Lead management workflows</li>
+            </ul>
+          </article>
         </div>
-
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="container">
-
-      <div class="about-grid">
-
-        <div class="about-text">
-
-          <div class="section-label">About Me</div>
-
-          <h2 class="section-title">
-            Building systems that make online businesses work smarter.
-          </h2>
-
-          <p>
-            I'm Oyinkansola Ajani, a digital marketing and automation
-            specialist focused on helping businesses improve the way they
+    <section class="content-section" id="about">
+      <div class="container">
+        <p class="eyebrow">A Little About Me</p>
+        <h2 class="section-heading">Focused on Practical Digital Solutions</h2>
+        <div class="about-panel">
+          <p class="about-text">
+            I'm Oyinkansola Ajani. I work across email marketing, e-commerce,
+            and business automation, helping businesses improve how they
             communicate with customers and manage their online operations.
           </p>
-
-          <p>
-            My work combines email marketing, Klaviyo, Shopify, and workflow
-            automation to create practical systems that save time and support
-            business growth.
+          <p class="about-text">
+            My approach is simple: understand the goal, choose the right tools,
+            and build a solution that fits the business.
           </p>
-
-        </div>
-
-        <div class="about-card">
-
-          <h3>What I Focus On</h3>
-
-          <p>
-            Creating practical digital systems that connect marketing,
-            customer communication, e-commerce, and business workflows.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section id="services">
-
-    <div class="container">
-
-      <div class="section-label">Services</div>
-
-      <h2 class="section-title">
-        How I can help
-      </h2>
-
-      <p class="section-description">
-        Practical solutions designed to improve your marketing, e-commerce
-        operations, and everyday business workflows.
-      </p>
-
-
-      <div class="cards">
-
-        <div class="card">
-
-          <div class="card-number">01</div>
-
-          <h3>Workflow Automation</h3>
-
-          <p>
-            Connecting repetitive business tasks into smarter workflows that
-            reduce manual work and keep operations organized.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-number">02</div>
-
-          <h3>Email Marketing</h3>
-
-          <p>
-            Building email campaigns, automated flows, segmentation, and
-            customer communication systems using Klaviyo.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-number">03</div>
-
-          <h3>Shopify & E-commerce</h3>
-
-          <p>
-            Helping e-commerce businesses improve their Shopify setup,
-            customer journey, and marketing processes.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WORK -->
-
-  <section id="work">
-
-    <div class="container">
-
-      <div class="section-label">Selected Work</div>
-
-      <h2 class="section-title">
-        Projects & solutions
-      </h2>
-
-      <p class="section-description">
-        A selection of projects that demonstrate my approach to email
-        marketing, automation, and e-commerce systems.
-      </p>
-
-
-      <div class="work-grid">
-
-
-        <!-- PROJECT 1 -->
-
-        <div class="project">
-
-          <span class="project-tag">
-            EMAIL MARKETING
-          </span>
-
-          <h3>
-            Klaviyo Email Automation
-          </h3>
-
-          <p>
-            Designed an automated email marketing system focused on customer
-            communication, segmentation, and lifecycle messaging.
-          </p>
-
-          <div class="project-details">
-            <strong>Tools:</strong> Klaviyo • Email Automation • Segmentation
+          <div class="tags">
+            <span class="tag">Klaviyo</span>
+            <span class="tag">Email Campaigns</span>
+            <span class="tag">Email Automation</span>
+            <span class="tag">Shopify</span>
+            <span class="tag">Zapier</span>
+            <span class="tag">Make.com</span>
+            <span class="tag">n8n</span>
+            <span class="tag">CRM Workflows</span>
           </div>
-
         </div>
-
-
-        <!-- PROJECT 2 -->
-
-        <div class="project">
-
-          <span class="project-tag">
-            WORKFLOW AUTOMATION
-          </span>
-
-          <h3>
-            Business Workflow System
-          </h3>
-
-          <p>
-            Created a structured workflow concept to reduce repetitive manual
-            tasks and organize business processes more efficiently.
-          </p>
-
-          <div class="project-details">
-            <strong>Focus:</strong> Workflow Design • Process Automation
-          </div>
-
-        </div>
-
-
-        <!-- PROJECT 3 -->
-
-        <div class="project">
-
-          <span class="project-tag">
-            SHOPIFY
-          </span>
-
-          <h3>
-            E-commerce Customer Journey
-          </h3>
-
-          <p>
-            Developed an e-commerce optimization concept connecting Shopify,
-            customer communication, and marketing touchpoints.
-          </p>
-
-          <div class="project-details">
-            <strong>Focus:</strong> Shopify • E-commerce • Customer Journey
-          </div>
-
-        </div>
-
-
-        <!-- PROJECT 4 -->
-
-        <div class="project">
-
-          <span class="project-tag">
-            MARKETING AUTOMATION
-          </span>
-
-          <h3>
-            Customer Communication System
-          </h3>
-
-          <p>
-            Planned a customer communication workflow designed to deliver
-            relevant messages at different stages of the customer journey.
-          </p>
-
-          <div class="project-details">
-            <strong>Focus:</strong> Automation • Email • Customer Segmentation
-          </div>
-
-        </div>
-
-
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-
-  <!-- SKILLS -->
-
-  <section id="skills">
-
-    <div class="container">
-
-      <div class="section-label">Skills</div>
-
-      <h2 class="section-title">
-        Tools & capabilities
-      </h2>
-
-      <p class="section-description">
-        Technologies and skills I use to build practical digital marketing
-        and automation solutions.
-      </p>
-
-
-      <div class="skills">
-
-        <div class="skill">Klaviyo</div>
-        <div class="skill">Shopify</div>
-        <div class="skill">Workflow Automation</div>
-        <div class="skill">Email Marketing</div>
-        <div class="skill">Email Automation</div>
-        <div class="skill">Email Campaigns</div>
-        <div class="skill">Customer Segmentation</div>
-        <div class="skill">E-commerce</div>
-        <div class="skill">AI Tools</div>
-        <div class="skill">Digital Marketing</div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-
-    <div class="container">
-
-      <div class="section-label">Contact</div>
-
-      <h2 class="section-title">
-        Let's build something useful.
-      </h2>
-
-
-      <div class="contact-box">
-
-        <p>
-          If you need help with email marketing, Shopify, or workflow
-          automation, let's discuss your project.
-        </p>
-
-
-        <div class="contact-links">
-
-          <a
-            href="mailto:ajanioyinkansola14@gmail.com"
-            class="btn btn-primary">
-            Email Me
-          </a>
-
-
-          <a
-            href="https://www.fiverr.com/s/611za9R"
-            target="_blank"
-            class="btn btn-secondary">
-            Fiverr
-          </a>
-
-
-          <a
-            href="https://www.upwork.com/freelancers/~017d48b1e6bc42f8d9?mp_source=share"
-            target="_blank"
-            class="btn btn-secondary">
-            Upwork
-          </a>
-
-
-          <a
-            href="https://www.freelancer.com/u/oyinkansola0?sb=t"
-            target="_blank"
-            class="btn btn-secondary">
-            Freelancer
-          </a>
-
+    <section class="content-section" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <p class="eyebrow">Let's Connect</p>
+          <h2 class="section-heading">Have a Project in Mind?</h2>
+          <p class="contact-text">
+            Tell me what you want to improve in your business, and let's discuss
+            a practical way to move forward.
+          </p>
+          <div class="buttons">
+            <a class="button button-primary"
+               href="https://www.upwork.com/freelancers/~017d48b1e6bc42f8d9"
+               target="_blank" rel="noopener noreferrer">Contact Me on Upwork</a>
+            <a class="button button-secondary"
+               href="https://ajanioyinkansola14-cloud.github.io/Ajani-Oyinkansola/"
+               target="_blank" rel="noopener noreferrer">View Portfolio URL</a>
+          </div>
         </div>
-
       </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
+    </section>
+  </main>
 
   <footer>
-
     <div class="container">
-
-      © 2026 Oyinkansola Ajani.
-      Built with <span>purpose</span>.
-
+      <span>© 2026 Oyinkansola Ajani</span>
+      <span>Email Marketing · Shopify · Automation</span>
     </div>
-
   </footer>
-
-
 </body>
 </html>
