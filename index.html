@@ -4,11 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Oyinkansola Ajani offers email marketing and Klaviyo, Shopify design, business automation, AI video creation, Bulk SMS, WhatsApp API, and VoIP solutions.">
+  <meta name="description" content="Oyinkansola Ajani offers email marketing, Klaviyo, Shopify design, business automation, AI video creation, messaging, and VoIP solutions.">
   <meta name="theme-color" content="#0B1220">
-  <meta property="og:title" content="Oyinkansola Ajani | Business Growth & Technology Solutions">
-  <meta property="og:description" content="Practical digital and technology solutions for businesses.">
-  <meta property="og:type" content="website">
   <title>Oyinkansola Ajani | Business Growth &amp; Technology Solutions</title>
 
   <style>
@@ -71,13 +68,15 @@
 
     nav {
       display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+      gap: 22px;
+      align-items: center;
+      flex-wrap: nowrap;
     }
 
     nav a {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
+      white-space: nowrap;
     }
 
     nav a:hover,
@@ -485,6 +484,27 @@
     }
 
     @media (max-width: 800px) {
+      .nav {
+        display: block;
+      }
+
+      .logo {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      nav {
+        overflow-x: auto;
+        gap: 24px;
+        padding-bottom: 8px;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+
+      nav::-webkit-scrollbar {
+        display: none;
+      }
+
       .hero {
         min-height: 350px;
       }
@@ -503,18 +523,6 @@
     }
 
     @media (max-width: 560px) {
-      .nav {
-        align-items: flex-start;
-      }
-
-      nav {
-        gap: 10px 13px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
       .grid,
       .project-grid,
       .steps,
@@ -538,19 +546,15 @@
 </head>
 
 <body>
+
   <header>
     <div class="container nav">
       <a class="logo" href="#home">Oyinkansola Ajani</a>
 
+      <!-- ONLY THREE NAVIGATION LINKS -->
       <nav aria-label="Main navigation">
         <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#email-marketing">Email Marketing</a>
         <a href="#other-services">Other Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#how-i-work">How I Work</a>
-        <a href="#about">About</a>
-        <a href="#faqs">FAQs</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -562,15 +566,12 @@
     <section class="container hero" id="home">
       <div class="hero-content">
         <div class="eyebrow">Business Growth &amp; Technology Solutions</div>
-
         <h1>Practical Solutions to Help Your Business Move Forward.</h1>
-
         <p>
           I help businesses with digital marketing, online stores, automation,
           customer messaging, AI videos, and technology solutions. Tell me
           what you're working on, and let's figure out how I can help.
         </p>
-
         <div class="buttons">
           <a class="btn" href="#services">Explore Services</a>
           <a class="btn btn-outline" href="#projects">View My Work</a>
@@ -592,7 +593,7 @@
 
         <div class="grid">
           <article class="card">
-            <div class="service-icon" aria-hidden="true">✉</div>
+            <div class="service-icon">✉</div>
             <h3>Email Marketing &amp; Klaviyo</h3>
             <p>
               Email campaign setup, Klaviyo flows, welcome emails,
@@ -602,7 +603,7 @@
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">▣</div>
+            <div class="service-icon">▣</div>
             <h3>Shopify Store Design</h3>
             <p>
               Shopify store setup, theme customization, mobile-friendly
@@ -612,12 +613,11 @@
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">⚙</div>
+            <div class="service-icon">⚙</div>
             <h3>Business Automation</h3>
             <p>
               Workflow automation, CRM connections, lead capture, and
-              repetitive task automation using tools such as Zapier, Make,
-              and n8n.
+              repetitive task automation using Zapier, Make, and n8n.
             </p>
             <a class="text-link" href="#contact">Discuss Your Project ↗</a>
           </article>
@@ -641,62 +641,44 @@
 
         <div class="grid">
           <article class="card">
-            <div class="service-icon" aria-hidden="true">✉</div>
+            <div class="service-icon">✉</div>
             <h3>Email Campaigns</h3>
-            <p>
-              Plan, build, and schedule promotional campaigns and newsletters
-              that fit your brand and goals.
-            </p>
+            <p>Plan, build, and schedule promotional campaigns and newsletters.</p>
             <a class="text-link" href="#contact">Discuss Your Project ↗</a>
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">👋</div>
+            <div class="service-icon">👋</div>
             <h3>Welcome Email Flows</h3>
-            <p>
-              Introduce new subscribers to your brand and guide them toward
-              their first purchase.
-            </p>
+            <p>Introduce new subscribers to your brand and guide them toward their first purchase.</p>
             <a class="text-link" href="#contact">Discuss Your Project ↗</a>
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">🛒</div>
+            <div class="service-icon">🛒</div>
             <h3>Abandoned Cart Automation</h3>
-            <p>
-              Follow up with shoppers who leave products in their carts
-              through automated email reminders.
-            </p>
+            <p>Follow up with shoppers who leave products in their carts.</p>
             <a class="text-link" href="#contact">Discuss Your Project ↗</a>
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">📦</div>
+            <div class="service-icon">📦</div>
             <h3>Post-Purchase Emails</h3>
-            <p>
-              Keep customers engaged after an order and encourage repeat
-              purchases with relevant follow-up emails.
-            </p>
+            <p>Keep customers engaged after an order and encourage repeat purchases.</p>
             <a class="text-link" href="#contact">Discuss Your Project ↗</a>
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">⚙</div>
+            <div class="service-icon">⚙</div>
             <h3>Klaviyo Setup</h3>
-            <p>
-              Organize lists, segments, signup forms, and email flows
-              to support your store's marketing.
-            </p>
+            <p>Organize lists, segments, signup forms, and email flows.</p>
             <a class="text-link" href="#contact">Discuss Your Project ↗</a>
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">✍</div>
+            <div class="service-icon">✍</div>
             <h3>Email Design &amp; Segmentation</h3>
-            <p>
-              Create clean, mobile-friendly emails and help deliver more
-              relevant messages to different customer groups.
-            </p>
+            <p>Create clean, mobile-friendly emails and deliver relevant messages to different customer groups.</p>
             <a class="text-link" href="#contact">Discuss Your Project ↗</a>
           </article>
         </div>
@@ -738,7 +720,7 @@
 
         <div class="grid">
           <article class="card">
-            <div class="service-icon" aria-hidden="true">✉</div>
+            <div class="service-icon">✉</div>
             <h3>Bulk SMS &amp; WhatsApp API</h3>
             <p>
               Bulk messaging services and WhatsApp API integration to help
@@ -749,23 +731,21 @@
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">▶</div>
+            <div class="service-icon">▶</div>
             <h3>Custom AI Video Creation</h3>
             <p>
-              Custom AI-generated videos for client needs, including
-              promotional content, product videos, social media, and
-              creative business projects.
+              Custom AI-generated videos for promotional content, product
+              videos, social media, and creative business projects.
             </p>
             <a class="text-link" href="#contact">Discuss Your Video ↗</a>
           </article>
 
           <article class="card">
-            <div class="service-icon" aria-hidden="true">☎</div>
+            <div class="service-icon">☎</div>
             <h3>VoIP &amp; Telecom Solutions</h3>
             <p>
               VoIP and SIP solutions, SIP trunk setup, DID connectivity,
-              PBX configuration, call routing, and related business
-              telephony services.
+              PBX configuration, call routing, and business telephony services.
             </p>
             <a class="text-link" href="#contact">Ask About Telecom ↗</a>
           </article>
@@ -794,7 +774,6 @@
                 title="Nestora Shopify store project"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
               </iframe>
             </div>
@@ -805,10 +784,8 @@
                 around practical solutions for kitchens, bedrooms,
                 bathrooms, and offices.
               </p>
-              <a class="text-link"
-                 href="https://youtu.be/B7EYEzlYELc"
-                 target="_blank"
-                 rel="noopener noreferrer">Watch Project Video ↗</a>
+              <a class="text-link" href="https://youtu.be/B7EYEzlYELc"
+                 target="_blank" rel="noopener noreferrer">Watch Project Video ↗</a>
             </div>
           </article>
 
@@ -819,7 +796,6 @@
                 title="Zapier lead capture and CRM automation project"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
               </iframe>
             </div>
@@ -830,10 +806,8 @@
                 HubSpot, Gmail, and Google Tasks to organize incoming
                 leads and simplify follow-up.
               </p>
-              <a class="text-link"
-                 href="https://youtu.be/16FtZxwh4so"
-                 target="_blank"
-                 rel="noopener noreferrer">Watch Project Video ↗</a>
+              <a class="text-link" href="https://youtu.be/16FtZxwh4so"
+                 target="_blank" rel="noopener noreferrer">Watch Project Video ↗</a>
             </div>
           </article>
 
@@ -844,7 +818,6 @@
                 title="Klaviyo Email Marketing and Shopify Automation Project"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
               </iframe>
             </div>
@@ -856,10 +829,8 @@
                 abandoned cart automation, post-purchase emails,
                 segmentation, and Klaviyo setup.
               </p>
-              <a class="text-link"
-                 href="https://youtu.be/LVONkrsF734"
-                 target="_blank"
-                 rel="noopener noreferrer">Watch Project Video ↗</a>
+              <a class="text-link" href="https://youtu.be/LVONkrsF734"
+                 target="_blank" rel="noopener noreferrer">Watch Project Video ↗</a>
             </div>
           </article>
 
@@ -875,8 +846,7 @@
           <h2>How I Work</h2>
           <p>
             Every project starts with a conversation. I want to understand
-            what you need and what you're trying to achieve before we get
-            started.
+            what you need and what you're trying to achieve before we get started.
           </p>
         </div>
 
@@ -884,7 +854,7 @@
           <article class="step">
             <div class="step-number">01 / LET'S TALK</div>
             <h3>Tell Me What You Need</h3>
-            <p>Share your idea, your business needs, or the problem you want to solve.</p>
+            <p>Share your idea, business needs, or the problem you want to solve.</p>
           </article>
 
           <article class="step">
@@ -902,7 +872,7 @@
           <article class="step">
             <div class="step-number">04 / REVIEW &amp; DELIVER</div>
             <h3>Review the Work</h3>
-            <p>You review the completed work, share agreed feedback, and receive the final deliverables.</p>
+            <p>You review the completed work and receive the final deliverables.</p>
           </article>
         </div>
       </div>
@@ -957,21 +927,18 @@
             <p>Hi, I'm Oyinkansola Ajani.</p>
             <p>
               I'm a digital service provider who enjoys helping businesses
-              bring their ideas to life, solve problems, and make their work
-              easier.
+              bring their ideas to life, solve problems, and make their work easier.
             </p>
             <p>
               I work across email marketing, Shopify store design, business
               automation, AI video creation, messaging solutions, and VoIP
-              services. Although these services are different, my goal is the
-              same: to understand what you need and help you find a practical
-              way to get it done.
+              services. My goal is to understand what you need and help you
+              find a practical way to get it done.
             </p>
             <p>
               I enjoy learning new tools, exploring better ways to work,
               and turning ideas into something useful. I also value clear
-              communication and making sure we're on the same page throughout
-              a project.
+              communication throughout a project.
             </p>
             <p>
               You can come with a clear plan or just an idea you're trying
@@ -1078,9 +1045,8 @@
           <div class="contact-options">
             <a class="contact-option"
                href="https://www.upwork.com/freelancers/~017d48b1e6bc42f8d9"
-               target="_blank"
-               rel="noopener noreferrer">
-              <div class="service-icon" aria-hidden="true">↗</div>
+               target="_blank" rel="noopener noreferrer">
+              <div class="service-icon">↗</div>
               <h3>Upwork</h3>
               <p>View my profile and discuss your project.</p>
               <span class="text-link">Visit Upwork ↗</span>
@@ -1088,9 +1054,8 @@
 
             <a class="contact-option"
                href="https://t.me/callcentervoipp1"
-               target="_blank"
-               rel="noopener noreferrer">
-              <div class="service-icon" aria-hidden="true">➤</div>
+               target="_blank" rel="noopener noreferrer">
+              <div class="service-icon">➤</div>
               <h3>Telegram</h3>
               <p>Visit my business Telegram channel.</p>
               <span class="text-link">Visit Telegram ↗</span>
@@ -1098,7 +1063,7 @@
 
             <a class="contact-option"
                href="mailto:ajanioyinkansola14@gmail.com?subject=Portfolio%20Project%20Inquiry">
-              <div class="service-icon" aria-hidden="true">✉</div>
+              <div class="service-icon">✉</div>
               <h3>Email Me</h3>
               <p>Send an inquiry about your project or service needs.</p>
               <span class="text-link">Send an Email ↗</span>
@@ -1114,7 +1079,7 @@
             <a href="https://www.tiktok.com/@oyin_growthhub?_r=1&_t=ZS-9AxSl0hGjcw" target="_blank" rel="noopener noreferrer">TikTok</a>
             <a href="https://x.com/Oyin_Growthhub" target="_blank" rel="noopener noreferrer">X</a>
             <a href="https://www.youtube.com/@OyinkansolaAjani-k2j" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a href="https://www.reddit.com/user/O_yingrowthhub/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank" rel="noopener noreferrer">Reddit</a>
+            <a href="https://www.reddit.com/user/O_yingrowthhub/" target="_blank" rel="noopener noreferrer">Reddit</a>
             <a href="https://www.threads.com/@oyinkansola_ajani" target="_blank" rel="noopener noreferrer">Threads</a>
           </div>
         </div>
@@ -1128,5 +1093,6 @@
       © 2026 Oyinkansola Ajani. All rights reserved.
     </div>
   </footer>
+
 </body>
 </html>
