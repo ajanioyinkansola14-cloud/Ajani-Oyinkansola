@@ -626,6 +626,45 @@
         font-size: 38px;
       }
     }
+
+    /* AI VIDEO SAMPLES */
+    .ai-samples {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .ai-sample {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .ai-sample video {
+      display: block;
+      width: 100%;
+      height: 520px;
+      object-fit: contain;
+      background: #050A12;
+    }
+
+    @media (max-width: 1000px) {
+      .ai-samples {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .ai-samples {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-sample video {
+        height: 480px;
+      }
+    }
   </style>
 </head>
 
@@ -841,7 +880,7 @@
               Custom AI-generated videos for promotional content, product
               videos, social media, and creative business projects.
             </p>
-            <a class="text-link" href="#contact">Discuss Your Video ↗</a>
+            <a class="text-link" href="#ai-video">See Video Work ↗</a>
           </article>
 
           <article class="card">
@@ -853,6 +892,86 @@
             </p>
             <a class="text-link" href="#contact">Ask About Telecom ↗</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI VIDEO WORK -->
+    <section id="ai-video">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Custom AI Video Creation</div>
+          <h2>AI Video Samples</h2>
+          <p>
+            Examples of custom AI-generated videos for recipes, products,
+            and brand promotion. Press play on any video to watch it.
+          </p>
+        </div>
+
+        <div class="ai-samples">
+          <article class="email-sample ai-sample">
+            <video controls preload="none" playsinline poster="ai-recipe-video.jpg" aria-label="AI Cooking Recipe Video">
+              <source src="ai-recipe-video.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <div class="email-sample-body">
+              <span class="sample-tag">Recipe Video</span>
+              <h4>AI Cooking Recipe Video</h4>
+              <p>A step-by-step recipe video with an AI-generated host, from preparing the ingredients to cooking in the pot.</p>
+            </div>
+          </article>
+
+          <article class="email-sample ai-sample">
+            <video controls preload="none" playsinline poster="ai-wrap-recipe.jpg" aria-label="AI Wrap Recipe Video">
+              <source src="ai-wrap-recipe.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <div class="email-sample-body">
+              <span class="sample-tag">Recipe Video</span>
+              <h4>AI Wrap Recipe Video</h4>
+              <p>Close-up cooking shots showing the sauce, the flatbread on the pan, and the wrap being assembled.</p>
+            </div>
+          </article>
+
+          <article class="email-sample ai-sample">
+            <video controls preload="none" playsinline poster="ai-product-ad.jpg" aria-label="AI Product Commercial">
+              <source src="ai-product-ad.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <div class="email-sample-body">
+              <span class="sample-tag">Product Ad</span>
+              <h4>AI Product Commercial</h4>
+              <p>A cinematic product ad with a premium serum bottle, a citrus water splash, and headphones.</p>
+            </div>
+          </article>
+
+          <article class="email-sample ai-sample">
+            <video controls preload="none" playsinline poster="ai-spokesperson.jpg" aria-label="AI Spokesperson Video">
+              <source src="ai-spokesperson.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <div class="email-sample-body">
+              <span class="sample-tag">Spokesperson</span>
+              <h4>AI Spokesperson Video</h4>
+              <p>A short AI presenter video with a phone screen and stats overlays, suited to brand and channel promotion.</p>
+            </div>
+          </article>
+
+          <article class="email-sample ai-sample">
+            <video controls preload="none" playsinline poster="ai-cooking-presenter.jpg" aria-label="AI Cooking Presenter Video">
+              <source src="ai-cooking-presenter.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <div class="email-sample-body">
+              <span class="sample-tag">Long-Form Video</span>
+              <h4>AI Cooking Presenter Video</h4>
+              <p>A longer cooking video with an AI presenter intro and close-up scenes of vegetables and tomato sauce.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="buttons">
+          <a class="btn" href="#contact">Discuss Your Video</a>
         </div>
       </div>
     </section>
