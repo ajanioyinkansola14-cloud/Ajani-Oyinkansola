@@ -665,6 +665,37 @@
         height: 480px;
       }
     }
+
+    /* VOIP WORK */
+    .voip-samples {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      max-width: 780px;
+      align-items: start;
+    }
+
+    @media (max-width: 700px) {
+      .voip-samples {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* VOIP WORK */
+    .voip-samples {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 760px;
+    }
+
+    .voip-samples .card {
+      justify-content: center;
+    }
+
+    @media (max-width: 560px) {
+      .voip-samples {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -733,7 +764,7 @@
               Shopify store setup, theme customization, mobile-friendly
               layouts, and a smoother shopping experience for customers.
             </p>
-            <a class="text-link" href="#contact">Discuss Your Project ↗</a>
+            <a class="text-link" href="#projects">See Shopify Work ↗</a>
           </article>
 
           <article class="card">
@@ -743,7 +774,7 @@
               Workflow automation, CRM connections, lead capture, and
               repetitive task automation using Zapier, Make, and n8n.
             </p>
-            <a class="text-link" href="#contact">Discuss Your Project ↗</a>
+            <a class="text-link" href="#projects">See Automation Work ↗</a>
           </article>
         </div>
       </div>
@@ -890,7 +921,7 @@
               VoIP and SIP solutions, SIP trunk setup, DID connectivity,
               PBX configuration, call routing, and business telephony services.
             </p>
-            <a class="text-link" href="#contact">Ask About Telecom ↗</a>
+            <a class="text-link" href="#voip-work">See Telecom Work ↗</a>
           </article>
         </div>
       </div>
@@ -972,6 +1003,84 @@
 
         <div class="buttons">
           <a class="btn" href="#contact">Discuss Your Video</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOIP WORK -->
+    <section id="voip-work">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">VoIP &amp; Telecom Solutions</div>
+          <h2>VoIP &amp; Telecom Work</h2>
+          <p>
+            A look at a recent telephony project: a 3CX phone system
+            connected to a Netherlands SIP trunk, with an IVR menu demo.
+          </p>
+        </div>
+
+        <div class="voip-samples">
+          <article class="email-sample ai-sample">
+            <video controls preload="none" playsinline poster="voip-ivr-demo.jpg" aria-label="IVR demo video">
+              <source src="voip-ivr-demo.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <div class="email-sample-body">
+              <span class="sample-tag">IVR Demo</span>
+              <h4>IVR Call Flow Demo</h4>
+              <p>A recorded test of an IVR menu, showing a call being placed and handled by the phone system.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">☎</div>
+            <h3>3CX + Netherlands SIP Trunk</h3>
+            <p>
+              Delivered a 3CX phone system connected to a Netherlands SIP trunk
+              for inbound and outbound calling.
+            </p>
+            <a class="text-link" href="#voip">See Telecom Work ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOIP WORK -->
+    <section id="voip">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">VoIP &amp; Telecom Solutions</div>
+          <h2>Telecom Work</h2>
+          <p>
+            Examples of VoIP and telephony projects I have set up for clients.
+            Press play to watch the IVR demo.
+          </p>
+        </div>
+
+        <div class="ai-samples voip-samples">
+          <article class="email-sample ai-sample">
+            <video controls preload="none" playsinline poster="voip-ivr-demo.jpg" aria-label="IVR demo video">
+              <source src="voip-ivr-demo.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <div class="email-sample-body">
+              <span class="sample-tag">IVR Demo</span>
+              <h4>IVR Setup Demo</h4>
+              <p>A demonstration of an IVR (automated call menu) setup in action.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">☎</div>
+            <span class="sample-tag">Delivered Project</span>
+            <h3>3CX + Netherlands SIP Trunk</h3>
+            <p>A 3CX business phone system delivered with a Netherlands SIP trunk.</p>
+            <a class="text-link" href="#contact">Ask About Telecom ↗</a>
+          </article>
+        </div>
+
+        <div class="buttons">
+          <a class="btn" href="#contact">Discuss Your Telecom Project</a>
         </div>
       </div>
     </section>
